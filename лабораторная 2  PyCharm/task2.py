@@ -1,22 +1,18 @@
-salary = 5000  # Ежемесячная зарплата
-spend = 6000  # Траты за первый месяц
-months = 10  # Количество месяцев, которое планируется протянуть без долгов
-increase = 0.03  # Ежемесячный рост цен
-
-# TODO Рассчитайте подушку безопасности, чтобы протянуть 10 месяцев без долгов
-# Переменная для хранения общей суммы, которую нужно будет использовать из подушки
+import math
+salary = 5000
+spend = 6000
+months = 10
+increase = 0.03
 total_needed = 0
 
-# Подсчет необходимых средств для каждого месяца
+
 for month in range(months):
-    # Вычисляем расходы за текущий месяц
-    if month > 0:  # Если это не первый месяц
-        spend *= (1 + increase)  # Увеличиваем расходы на 5%
+    if month > 0:
+        spend *= (1 + increase)
 
-    # Определяем, сколько средств нужно из подушки
-    if spend > salary:
-        total_needed += spend - salary  # Добавляем нехватку средств из подушки
-
-# Округляем результат до целого числа
-total_needed = round(total_needed)
+         if spend > salary:
+              total_needed += spend - salary
+import math
+    total_needed = math.ceil(total_needed)
 print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", total_needed )
+
