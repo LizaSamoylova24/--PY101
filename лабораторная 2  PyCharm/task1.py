@@ -9,4 +9,4 @@ while money_capital + salary >= spend:
       money_capital += salary - spend
       spend *= (1 + increase)
 
-print("Количество месяцев, которое можно протянуть без долгов:",months)
+print("Количество месяцев, которое можно протянуть без долгов:", months)
