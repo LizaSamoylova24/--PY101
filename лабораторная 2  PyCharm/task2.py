@@ -1,4 +1,3 @@
-import math
 salary = 5000
 spend = 6000
 months = 10
