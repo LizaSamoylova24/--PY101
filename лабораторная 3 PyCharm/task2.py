@@ -16,8 +16,3 @@ participants_second_group2 = "Петров,Сидоров,Смирнов"
 
 common_participants2 = find_common_participants(participants_first_group2, participants_second_group2, separator=',')
 print(common_participants2)
-
-
-
-
-
