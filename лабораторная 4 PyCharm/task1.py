@@ -2,19 +2,19 @@ import json
 
 
 def task() -> float:
-    sum_ = 0
+    total = 0
 
-    with open("input.json", "r", encoding="utf-8") as q:
-        data = json.load(q)
+    with open("input.json", "r", encoding="utf-8") as file:
+        data = json.load(file)
 
         for item in data:
-            chislo1 = item.get("score", 0)
-            chislo2 = item.get("weight", 0)
+            score = item.get("score", 0)
+            weight = item.get("weight", 0)
 
-            if chislo1 and chislo2:
-                sum_ += chislo1 * chislo2
+            if score and weight:
+                total += score * weight
 
-    return round(sum_, 3)
+    return round(total, 3)
 
 
 print(task())
